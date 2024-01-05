@@ -43,7 +43,7 @@ def import_target(
 
                 break
 
-            target = getattr(imported_module, target_object)  # TODO: create_app 팩토리라면, 거내서 생성까지
+            target = getattr(imported_module, target_object)
             # globals().update({target_name: target})
             import_map.update({target_object: target})
             target_object = getattr(target, '__name__', target_object)
